@@ -1,26 +1,4 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
 
-provider "aws" {
-  region     = "us-east-1"
-  access_key = var.access-key
-  secret_key = var.secret-key
-}
-
-variable "access-key" {
-  description = "access key"
-  type        = string
-}
-
-variable "secret-key" {
-  description = "secret access key"
-  type        = string
-}
 
 # vpc
 resource "aws_vpc" "dev-vpc" {

@@ -1,33 +1,4 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
 
-# Configure the AWS Provider
-provider "aws" {
-  region     = "us-east-1"
-  access_key = var.access-key
-  secret_key = var.secret-key
-}
-
-variable "access-key" {
-  description = "My account access key"
-  type        = string
-}
-variable "secret-key" {
-  description = "My account secret key"
-  type        = string
-}
-
-# How to Create a resource
-#resource "<provider>_<resource_type>" "name" {
-#  config options
-#}
-
-# To begin: Create a Key Pair on AWS
 # 1. Create a VPC
 resource "aws_vpc" "VPC" {
   cidr_block = "10.0.0.0/16"
