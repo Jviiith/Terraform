@@ -113,7 +113,7 @@ resource "aws_instance" "WebServer1" {
   }
 }
 
-# 9. Assaign an elastic IP to the network interface (public ip for web server)
+# 9. Assign an elastic IP to the network interface (public ip for web server)
 resource "aws_eip" "one" {
   domain                    = "vpc"
   network_interface         = aws_network_interface.Web-ENI.id
